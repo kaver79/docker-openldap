@@ -1,0 +1,83 @@
+dn: cn=defaults,ou=SUDOers,ou=Apps,dc=cwds,dc=io
+objectClass: top
+objectClass: sudoRole
+cn: defaults
+description: Default sudoOption's go here
+sudoOption: !visiblepw
+sudoOption: always_set_home
+sudoOption: env_reset
+sudoOption: env_keep =  "COLORS DISPLAY HOSTNAME HISTSIZE INPUTRC KDEDIR LS_COLORS"
+sudoOption: env_keep += "MAIL PS1 PS2 QTDIR USERNAME LANG LC_ADDRESS LC_CTYPE"
+sudoOption: env_keep += "LC_COLLATE LC_IDENTIFICATION LC_MEASUREMENT LC_MESSAGES"
+sudoOption: env_keep += "LC_MONETARY LC_NAME LC_NUMERIC LC_PAPER LC_TELEPHONE"
+sudoOption: env_keep += "LC_TIME LC_ALL LANGUAGE LINGUAS _XKB_CHARSET XAUTHORITY"
+sudoOption: secure_path = /sbin:/bin:/usr/sbin:/usr/bin
+sudoOrder: 1
+
+dn: cn=root,ou=SUDOers,ou=Apps,dc=cwds,dc=io
+objectClass: top
+objectClass: sudoRole
+cn: root
+sudoUser: root
+sudoHost: ALL
+sudoRunAsUser: ALL
+sudoCommand: ALL
+sudoOrder: 2
+
+dn: cn=%wheel,ou=SUDOers,ou=Apps,dc=cwds,dc=io
+objectClass: top
+objectClass: sudoRole
+cn: %wheel
+sudoUser: %wheel
+sudoHost: ALL
+sudoRunAsUser: ALL
+sudoCommand: ALL
+sudoOption: !authenticate
+sudoOrder: 3
+
+dn: cn=%LDAPDevOps,ou=SUDOers,ou=Apps,dc=cwds,dc=io
+objectClass: top
+objectClass: sudoRole
+cn: %LDAPDevOps
+sudoUser: %LDAPDevOps
+sudoHost: ALL
+sudoRunAsUser: ALL
+sudoCommand: ALL
+sudoOption: !authenticate
+sudoOrder: 4
+
+dn: cn=%LDAPDocker,ou=SUDOers,ou=Apps,dc=cwds,dc=io
+objectClass: top
+objectClass: sudoRole
+cn: %LDAPDocker
+sudoCommand: /usr/bin/docker
+sudoCommand: /usr/local/bin/docker-compose
+sudoHost: ALL
+sudoOption: !authenticate
+sudoOrder: 110
+sudoRunAsUser: ALL
+sudoUser: %LDAPDocker
+
+dn: cn=ansible,ou=SUDOers,ou=Apps,dc=cwds,dc=io
+objectClass: sudoRole
+objectClass: top
+cn: ansible
+sudoCommand: ALL
+sudoCommand: !/bin/su
+sudoHost: ALL
+sudoOption: !authenticate
+sudoOrder: 5
+sudoRunAsUser: ALL
+sudoUser: ansible
+
+dn: cn=%LDAPUser,ou=SUDOers,ou=Apps,dc=cwds,dc=io
+objectClass: top
+objectClass: sudoRole
+cn: %LDAPUser
+sudoCommand: /usr/bin/docker
+sudoCommand: /usr/local/bin/docker-compose
+sudoHost: ALL
+sudoOption: !authenticate
+sudoOrder: 120
+sudoRunAsUser: ALL
+sudoUser: %LDAPUser

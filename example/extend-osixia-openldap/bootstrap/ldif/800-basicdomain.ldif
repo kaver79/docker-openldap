@@ -1,0 +1,165 @@
+dn: cn=passwordDefault,ou=Policies,dc=cwds,dc=io
+objectClass: pwdPolicy
+objectClass: person
+objectClass: top
+cn: passwordDefault
+sn: passwordDefault
+pwdAttribute: userPassword
+pwdCheckQuality: 0
+pwdMinAge: 0
+pwdMaxAge: 777600
+pwdMinLength: 8
+pwdInHistory: 5
+pwdMaxFailure: 8
+pwdFailureCountInterval: 0
+pwdLockout: TRUE
+pwdLockoutDuration: 0
+pwdAllowUserChange: TRUE
+pwdExpireWarning: 0
+pwdGraceAuthNLimit: 0
+pwdMustChange: FALSE
+pwdSafeModify: FALSE
+
+dn: cn=LDAPDevOps,ou=Group,dc=cwds,dc=io
+cn: LDAPDevOps
+gidnumber: 5000
+objectclass: posixGroup
+objectclass: top
+
+dn: cn=LDAPUser,ou=Group,dc=cwds,dc=io
+cn: LDAPUser
+gidnumber: 5001
+objectclass: posixGroup
+objectclass: top
+
+dn: cn=Alex Kuznetsov,ou=People,dc=cwds,dc=io
+cn: Alex Kuznetsov
+gidnumber: 5000
+givenname: Alex
+homedirectory: /home/users/akuznetsov
+loginshell: /bin/sh
+mail: Alex.Kuznetsov@osi.ca.gov
+objectclass: inetOrgPerson
+objectclass: posixAccount
+objectClass: ldapPublicKey
+objectclass: top
+sn: Kuznetsov
+uid: akuznetsov
+uidnumber: 5000
+sshPublicKey: ssh-rsa AAAAB3NzaC1yc2EAAAABJQAAAQEAwb/RzwTQuOtxAHhNW2IT9CSvP3oe
+ BU+ajeo+YaHshZoHJjveLKEchqwK2jurlSKLwdolx+J+djTEof7yP8qLs4HWoDE6XceZDTzRdPUyG
+ V2ipGMS7zjbPA9Dci1vwQp2tdP3IlLpzjCOc6ks8PokPtFfOS4aL3Dt+BdzAPdqznwPQcMJh6WATA
+ JOdP6IPwvCedozwuD+UjpLbpH3JXo/HYdMNOfVYF+RViTfIMqZEGRnYwwi66aZdOIQTzb3Wf1PUTb
+ CYLCnqVppqb4QjpXshulKIybNEZA7DAIoRbrQUe9sYK4KAVksAMw4/WGNDA/Au+hOd8J3/V56+kQG
+ MysxxQ== akuznetsov pub
+userpassword: {CRYPT}m.y273z1KbLEM
+
+dn: cn=Harjeet Manku,ou=People,dc=cwds,dc=io
+cn: Harjeet Manku
+givenName: Harjeet
+sn: Manku
+mail: Harjeet.Manku@osi.ca.gov
+uid: hmanku
+homeDirectory: /home/users/hmanku
+uidNumber: 5025
+gidNumber: 5000
+objectClass: inetOrgPerson
+objectClass: posixAccount
+objectClass: ldapPublicKey
+objectClass: top
+loginShell: /bin/bash
+sshPublicKey: ssh-rsa AAAAB3NzaC1yc2EAAAABJQAAAQEAxEBTjWCav65FjQG3vw55fSyv+i
+ lDPC8kOeQ+zxR9vdnNNIaq4CbbQ4YGtnmvT3tBCElfz7jPgK7Tdb0OILWyV+dKSdT6NqsICtuSc
+ OFbVvaYOTrE3G9Ma4BW37Or6c7N82fzQNzUekj3LMbyH8ftQLZ/nr1m/zx63xpv0RyiZyHDYznZ
+ 2dOsKy6LGIMDmMeiX6Neox45+OxtpwfpBFlsL8Gq2Vo0dNWvJoSWFMu4bjzRWGQCg8xSpSXl4jO
+ YuNBvhie0o0wu/+ToF94/OKSNGNSzilXCXefnM3+jDWwNi4btq3NcfjskayYC2tDqxrfJcQ7HdV
+ ysmPHT5+dWIxA98Q== rsa-key-20201027
+pwdPolicySubentry: cn=passwordDefault,ou=Policies,dc=cwds,dc=io
+userPassword:: e0NSWVBUfSQ2JHNGMVFDZyROa2hqNDd2U3FrU3hSa2guQmlEZDFKRXhpQktvb
+ GJBVS84UmRzZjNxSVJDcUdlSGMxU1RMTGtTVGlydEQ2UEl2dDkvZU1Pb3ViVE5DZ3IyV3l0aHR6
+ MQ==
+
+dn: cn=Jenkins Dev,ou=People,dc=cwds,dc=io
+objectClass: top
+objectClass: ldapPublicKey
+objectClass: posixAccount
+objectClass: inetOrgPerson
+cn: Jenkins Dev
+gidNumber: 5001
+homeDirectory: /home/users/jdev
+sn: Dev
+uid: jdev
+uidNumber: 5273
+givenName: Jenkins
+loginShell: /sbin/nologin
+mail: Jenkins.Dev@osi.ca.gov
+userPassword:: e0NSWVBUfWFhVnRwZC52NzRIc2c=
+
+dn: cn=Jenkins Mgmn,ou=People,dc=cwds,dc=io
+objectClass: top
+objectClass: ldapPublicKey
+objectClass: posixAccount
+objectClass: inetOrgPerson
+cn: Jenkins Mgmn
+gidNumber: 5001
+homeDirectory: /home/users/mjenkins
+sn: Mgmn
+uid: mjenkins
+uidNumber: 5085
+givenName: Jenkins
+loginShell: /sbin/nologin
+mail: Jenkins.Mgmn@osi.ca.gov
+userPassword:: e0NSWVBUfUtxWllBdkNSaVdEV3c=
+
+dn: cn=ldap search,ou=People,dc=cwds,dc=io
+objectClass: top
+objectClass: ldapPublicKey
+objectClass: posixAccount
+objectClass: inetOrgPerson
+cn: ldap search
+gidNumber: 5001
+homeDirectory: /home/users/lsearch
+sn: search
+uid: lsearch
+uidNumber: 5034
+givenName: ldap
+loginShell: /sbin/nologin
+mail: ldap.search@osi.ca.gov
+userPassword:: e0NSWVBUfWNFeHk3YlBrdnh6cDI=
+
+dn: cn=functional-user,ou=Group,dc=cwds,dc=io
+objectClass: top
+objectClass: groupOfNames
+cn: functional-user
+member: cn=ldap search,ou=People,dc=cwds,dc=io
+member: cn=Jenkins Mgmn,ou=People,dc=cwds,dc=io
+member: cn=Jenkins Dev,ou=People,dc=cwds,dc=io
+
+dn: cn=ldapAdministratorsGroup,ou=Group,dc=cwds,dc=io
+objectClass: groupOfNames
+objectClass: top
+cn: ldapAdministratorsGroup
+member: cn=Manager,dc=cwds,dc=io
+member: cn=Alex Kuznetsov,ou=People,dc=cwds,dc=io
+member: cn=Harjeet Manku,ou=People,dc=cwds,dc=io
+
+dn: cn=DevOps,ou=Group,dc=cwds,dc=io
+objectClass: groupOfNames
+objectClass: top
+cn: DevOps
+member: cn=LDAPDevOps,ou=Group,dc=cwds,dc=io
+member: cn=Alex Kuznetsov,ou=People,dc=cwds,dc=io
+member: cn=Harjeet Manku,ou=People,dc=cwds,dc=io
+
+dn: cn=JenkinsAdmin,ou=Group,dc=cwds,dc=io
+objectClass: groupOfNames
+objectClass: top
+cn: JenkinsAdmin
+member: cn=Alex Kuznetsov,ou=People,dc=cwds,dc=io
+member: cn=Harjeet Manku,ou=People,dc=cwds,dc=io
+
+dn: cn=JenkinsUser,ou=Group,dc=cwds,dc=io
+objectClass: groupOfNames
+objectClass: top
+cn: JenkinsUser
+member: cn=ldap search,ou=People,dc=cwds,dc=io

@@ -1,0 +1,37 @@
+dn: cn=Manager,dc=cwds,dc=io
+objectClass: top
+objectClass: organizationalRole
+cn: Manager
+description: Directory Manager
+
+dn: ou=People,dc=cwds,dc=io
+objectClass: top
+objectClass: organizationalUnit
+ou: People
+
+dn: ou=Group,dc=cwds,dc=io
+objectClass: top
+objectClass: organizationalUnit
+ou: Group
+
+dn: ou=Apps,dc=cwds,dc=io
+objectClass: top
+objectClass: organizationalUnit
+ou: Apps
+description: Application container
+
+dn: ou=SUDOers,ou=Apps,dc=cwds,dc=io
+objectClass: top
+objectClass: organizationalUnit
+ou: SUDOers
+description: SUDOers container
+
+dn: ou=Policies,dc=cwds,dc=io
+objectClass: top
+ou: Policies
+objectClass: organizationalUnit
+
+dn: ou=deleted-user,dc=cwds,dc=io
+objectClass: organizationalUnit
+objectClass: top
+ou: deleted-user
